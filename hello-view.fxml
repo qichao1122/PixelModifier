@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalprojectqz.ImageViewer">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <Label text="Image Viewer">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Pane>
+         <children>
+            <Label layoutX="8.0" layoutY="6.0" text="Image File : " />
+            <Label layoutX="8.0" layoutY="36.0" text="Image Width: " />
+            <Label layoutX="8.0" layoutY="67.0" text="Image Height:" />
+            <Label layoutX="7.0" layoutY="100.0" text="Pixel Count: " />
+            <Line endX="116.0" layoutX="116.0" layoutY="163.0" startX="-116.0" />
+            <Line endX="116.0" layoutX="117.0" layoutY="381.0" startX="-116.0" />
+            <Label layoutX="26.0" layoutY="391.0" text="Max Tint: " />
+            <Line endX="1.1999969482421875" endY="-27.600006103515625" layoutX="116.0" layoutY="418.0" startX="1.20001220703125" startY="86.79995727539062" />
+            <Canvas fx:id="imageDisplay" height="200.0" layoutX="16.0" layoutY="172.0" onDragDetected="#onLoadButtonClick" width="200.0" />
+            <CheckBox fx:id="grayscaleBox" layoutX="132.0" layoutY="431.0" mnemonicParsing="false" onAction="#onGrayscaleBoxClick" text="Grayscale" />
+            <RadioButton fx:id="redTintSelect" layoutX="17.0" layoutY="414.0" mnemonicParsing="false" text="RED" textFill="#f40c0c" />
+            <RadioButton fx:id="greenTintSelect" layoutX="16.0" layoutY="439.0" mnemonicParsing="false" text="GREEN" textFill="#20e71c" />
+            <RadioButton fx:id="blueTintSelect" layoutX="16.0" layoutY="466.0" mnemonicParsing="false" text="BLUE" textFill="#1f16cf" />
+            <Button layoutX="73.0" layoutY="516.0" mnemonicParsing="false" onAction="#onModImgButtonClick" text="Modify Image" />
+            <Line endX="116.0" layoutX="122.0" layoutY="557.0" startX="-116.0" />
+            <Label layoutX="12.0" layoutY="568.0" text="Image Date File :  " />
+            <TextField fx:id="fileNameInput" layoutX="104.0" layoutY="564.0" />
+            <Button layoutX="260.0" layoutY="564.0" mnemonicParsing="false" onAction="#onLoadButtonClick" text="Load Image Data" />
+            <Label layoutX="12.0" layoutY="600.0" text="Destination File:  " />
+            <TextField fx:id="saveFilenameInput" layoutX="104.0" layoutY="596.0" />
+            <Button layoutX="260.0" layoutY="596.0" mnemonicParsing="false" onAction="#onSaveButtonClick" text="Save New Image" />
+            <Label fx:id="imageWidthInfo" alignment="CENTER" layoutX="118.0" layoutY="36.0" textFill="#a10505">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="imageHeightInfo" alignment="CENTER" layoutX="118.0" layoutY="75.0" textFill="#c41919">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="imagePixelInfo" alignment="CENTER" layoutX="118.0" layoutY="100.0" />
+            <Label fx:id="imageFileInfo" alignment="CENTER" layoutX="132.0" layoutY="6.0" textFill="#cc0505">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="fileErrorText" layoutX="12.0" layoutY="357.0" textFill="#ae1111" />
+            <Label fx:id="saveConfirmMsg" layoutX="162.0" layoutY="633.0" textFill="#cf1111">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+
+
+</VBox>
